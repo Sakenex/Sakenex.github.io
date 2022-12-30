@@ -5,7 +5,7 @@
         <style>
         .buttons {
             border: none;
-            border-radius: 10px;
+            left-border-radius: 10px;
             padding: 4px 4px;
             text-align: center;
             text-decoration: none;
@@ -14,11 +14,24 @@
             margin: 4px 4px;
             cursor: pointer;
          }
+         .centbut{
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.inverted-button {
+  mix-blend-mode: difference;
+  filter: invert(100%);
+}
     .Tcenter {
         text-align: center;
     }
     .CoolText {
-    font-family: 'Seymour One', sans-serif;font-size: 22px;
+    font-family: 'Seymour One', sans-serif;
+    }
+    .cooltext {
+    font-family: 'Seymour One', sans-serif;
     }
         </style>
         <meta charset="UTF-8" />
@@ -28,34 +41,99 @@
     </head>
     <body>
         <main >
-            <p class="CoolText Tcenter">Sakenex#0001</p>
+            <p style="font-size: 40px;"class="CoolText Tcenter">Sakenex#0001</p>
+            <button style="background-color:DodgerBlue"class="inverted-button centbut buttons cooltext" type="button" onclick="location.href='https://sakenex.github.io/'">return to main menu</button>
             
               <script>
+              
+              
+              
+              
+    function InvertHex(hexa){
+
+function hexToRgb(hex) {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? {
+    r: parseInt(result[1], 16),
+    g: parseInt(result[2], 16),
+    b: parseInt(result[3], 16)
+  } : null;
+}
+
+function invertRgb(rgb) {
+  return {
+    r: 255 - rgb.r,
+    g: 255 - rgb.g,
+    b: 255 - rgb.b
+  };
+}
+
+function rgbToHex(rgb) {
+  return `#${((1 << 24) + (rgb.r << 16) + (rgb.g << 8) + rgb.b).toString(16).slice(1)}`;
+}
+
+
+const rgb = hexToRgb(hexa);
+const invertedRgb = invertRgb(rgb);
+const invertedHex = rgbToHex(invertedRgb);
+
+return invertedHex
+
+}
+
     r = Math.floor(Math.random() * 5) + 1
 	
     if (r==1){
-    document.querySelector("body").style.backgroundColor="#e9fc88"
+    var hexcode = "#e9fc88"
+    document.querySelector("body").style.backgroundColor=hexcode
+    document.querySelector("body > main > button").style.backgroundColor=hexcode
+    
+    var intc = InvertHex(hexcode)
+    document.querySelector("body > main > button").style.backgroundColor=intc
+    document.querySelector("body > main > button").style.color=hexcode
     //yellow
     }
     
     if (r==2){
-    document.querySelector("body").style.backgroundColor="#5a37e8"
+    var hexcode = "#5a37e8"
+    document.querySelector("body").style.backgroundColor=hexcode
+    
+    var intc = InvertHex(hexcode)
+    document.querySelector("body > main > button").style.backgroundColor=intc
     document.querySelector("body > main > p").style.color = "white"
-    //blue
+    document.querySelector("body > main > button").style.color=hexcode
+    //deep blue
     }
     
-    if (r==3){document.querySelector("body").style.backgroundColor="#88fc92"
+    if (r==3){
+    var hexcode = "#88fc92"
+    document.querySelector("body").style.backgroundColor=hexcode
+    
+    var intc = InvertHex(hexcode)
+    document.querySelector("body > main > button").style.backgroundColor=intc
+    document.querySelector("body > main > button").style.color=hexcode
     //green
     }
     
     if (r==4){
-    document.querySelector("body").style.backgroundColor="#88d7fc"
+    var hexcode = "#88d7fc"
+    document.querySelector("body").style.backgroundColor=hexcode
+    document.querySelector("body > main > button").style.backgroundColor=hexcode
+    
+    var intc = InvertHex(hexcode)
+    document.querySelector("body > main > button").style.backgroundColor=intc
+    document.querySelector("body > main > button").style.color=hexcode
     //blue
     }
     
     if (r==5){
-    document.querySelector("body").style.backgroundColor="#fc8890"
+    var hexcode = "#fc8890"
+    document.querySelector("body").style.backgroundColor=hexcode
+    
+    var intc = InvertHex(hexcode)
+    document.querySelector("body > main > button").style.backgroundColor=intc
     document.querySelector("body > main > p").style.color = "white"
+    document.querySelector("body > main > button").style.color=hexcode
     }
 
     </script>
