@@ -14,8 +14,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Sakenex#0001</title>
     </head>
-    <body>
+    <body bgcolor="#5a37e8">
         <main>
-            <p class="Tcenter CoolText">Sakenex#0001</p>
+            <p style="color:white;" class="Tcenter CoolText">Sakenex#0001</p>
         </main>
 </html>
