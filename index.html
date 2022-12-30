@@ -5,7 +5,6 @@
         <style>
         .buttons {
             border: none;
-            border-radius: 10px;
             padding: 4px 4px;
             text-align: center;
             text-decoration: none;
@@ -14,49 +13,144 @@
             margin: 4px 4px;
             cursor: pointer;
          }
+
+         .centbut{
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.inverted-button {
+  filter: invert(100%);
+}
     .Tcenter {
         text-align: center;
     }
     .CoolText {
-    font-family: 'Seymour One', sans-serif;font-size: 22px;
+    font-family: 'Seymour One', sans-serif;
     }
+    .cooltext {
+    font-family: 'Seymour One', sans-serif;
+    }
+    .tre {
+  border-radius: 5px;
+}
+
+.cbc {
+  border:3px solid;
+}
+
+    .tbg {
+  background-color: transparent;
+}
+
+    .ttbg {
+  background-color: rgba(255, 255, 255, 0.1);
+}
         </style>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Sakenex was here! :-)</title>
+      <title>Sakenex#0001</title>
     </head>
-    <body>
+    <body class="grad">
         <main >
-            <p class="CoolText Tcenter">hello!</p>
-            <button class="buttons" type="button" onclick="location.href='/distag'" >  </button>
+            <p style="font-size: 40px;"class="CoolText Tcenter">Hello!</p>
+            <button style=""class="inverted-button centbut buttons cooltext ttbg tre cbc" type="button" onclick="location.href='https://sakenex.github.io/distag'">discord tag</button>
             
               <script>
+              
+              
+              
+              
+    function InvertHex(hexa){
+
+function hexToRgb(hex) {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? {
+    r: parseInt(result[1], 16),
+    g: parseInt(result[2], 16),
+    b: parseInt(result[3], 16)
+  } : null;
+}
+
+function invertRgb(rgb) {
+  return {
+    r: 255 - rgb.r,
+    g: 255 - rgb.g,
+    b: 255 - rgb.b
+  };
+}
+
+function rgbToHex(rgb) {
+  return `#${((1 << 24) + (rgb.r << 16) + (rgb.g << 8) + rgb.b).toString(16).slice(1)}`;
+}
+
+
+const rgb = hexToRgb(hexa);
+const invertedRgb = invertRgb(rgb);
+const invertedHex = rgbToHex(invertedRgb);
+
+return invertedHex
+
+}
+
     r = Math.floor(Math.random() * 5) + 1
 	
     if (r==1){
-    document.querySelector("body").style.backgroundColor="#e9fc88"
+    var hexcode = "#e9fc88"
+    document.querySelector("body").style.backgroundColor=hexcode
+    //document.querySelector("body > main > button").style.backgroundColor=hexcode
+    
+    var intc = InvertHex(hexcode)
+    //document.querySelector("body > main > button").style.backgroundColor=intc
+    document.querySelector("body > main > button").style.color=hexcode
+    document.querySelector("body > main > p").style.color = intc
     //yellow
     }
     
     if (r==2){
-    document.querySelector("body").style.backgroundColor="#5a37e8"
-    document.querySelector("body > main > p").style.color = "white"
-    //blue
+    var hexcode = "#5a37e8"
+    document.querySelector("body").style.backgroundColor=hexcode
+    
+    var intc = InvertHex(hexcode)
+    //document.querySelector("body > main > button").style.backgroundColor=intc
+    document.querySelector("body > main > p").style.color = intc
+    document.querySelector("body > main > button").style.color=hexcode
+    //deep blue
     }
     
-    if (r==3){document.querySelector("body").style.backgroundColor="#88fc92"
+    if (r==3){
+    var hexcode = "#88fc92"
+    document.querySelector("body").style.backgroundColor=hexcode
+    
+    var intc = InvertHex(hexcode)
+    //document.querySelector("body > main > button").style.backgroundColor=intc
+    document.querySelector("body > main > button").style.color=hexcode
+    document.querySelector("body > main > p").style.color = intc
     //green
     }
     
     if (r==4){
-    document.querySelector("body").style.backgroundColor="#88d7fc"
+    var hexcode = "#88d7fc"
+    document.querySelector("body").style.backgroundColor=hexcode
+    //document.querySelector("body > main > button").style.backgroundColor=hexcode
+    
+    var intc = InvertHex(hexcode)
+    //document.querySelector("body > main > button").style.backgroundColor=intc
+    document.querySelector("body > main > button").style.color=hexcode
+    document.querySelector("body > main > p").style.color = intc
     //blue
     }
     
     if (r==5){
-    document.querySelector("body").style.backgroundColor="#fc8890"
-    document.querySelector("body > main > p").style.color = "white"
+    var hexcode = "#fc8890"
+    document.querySelector("body").style.backgroundColor=hexcode
+    
+    var intc = InvertHex(hexcode)
+    //document.querySelector("body > main > button").style.backgroundColor=intc
+    document.querySelector("body > main > p").style.color = intc
+    document.querySelector("body > main > button").style.color=hexcode
     }
 
     </script>
