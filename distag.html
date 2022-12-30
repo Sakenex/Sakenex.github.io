@@ -14,6 +14,7 @@
             margin: 4px 4px;
             cursor: pointer;
          }
+
          .centbut{
   position: fixed;
   bottom: 0;
@@ -32,16 +33,19 @@
     .cooltext {
     font-family: 'Seymour One', sans-serif;
     }
+    .tbg {
+  background-color: transparent;
+}
         </style>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Sakenex#0001</title>
     </head>
-    <body>
+    <body class="grad">
         <main >
             <p style="font-size: 40px;"class="CoolText Tcenter">Sakenex#0001</p>
-            <button style="background-color:DodgerBlue"class="inverted-button centbut buttons cooltext" type="button" onclick="location.href='https://sakenex.github.io/'">return to main menu</button>
+            <button style=""class="inverted-button centbut buttons cooltext tbg" type="button" onclick="location.href='https://sakenex.github.io/'">return to main menu</button>
             
               <script>
               
@@ -85,11 +89,12 @@ return invertedHex
     if (r==1){
     var hexcode = "#e9fc88"
     document.querySelector("body").style.backgroundColor=hexcode
-    document.querySelector("body > main > button").style.backgroundColor=hexcode
+    //document.querySelector("body > main > button").style.backgroundColor=hexcode
     
     var intc = InvertHex(hexcode)
-    document.querySelector("body > main > button").style.backgroundColor=intc
+    //document.querySelector("body > main > button").style.backgroundColor=intc
     document.querySelector("body > main > button").style.color=hexcode
+    document.querySelector("body > main > p").style.color = intc
     //yellow
     }
     
@@ -98,8 +103,8 @@ return invertedHex
     document.querySelector("body").style.backgroundColor=hexcode
     
     var intc = InvertHex(hexcode)
-    document.querySelector("body > main > button").style.backgroundColor=intc
-    document.querySelector("body > main > p").style.color = "white"
+    //document.querySelector("body > main > button").style.backgroundColor=intc
+    document.querySelector("body > main > p").style.color = intc
     document.querySelector("body > main > button").style.color=hexcode
     //deep blue
     }
@@ -109,19 +114,21 @@ return invertedHex
     document.querySelector("body").style.backgroundColor=hexcode
     
     var intc = InvertHex(hexcode)
-    document.querySelector("body > main > button").style.backgroundColor=intc
+    //document.querySelector("body > main > button").style.backgroundColor=intc
     document.querySelector("body > main > button").style.color=hexcode
+    document.querySelector("body > main > p").style.color = intc
     //green
     }
     
     if (r==4){
     var hexcode = "#88d7fc"
     document.querySelector("body").style.backgroundColor=hexcode
-    document.querySelector("body > main > button").style.backgroundColor=hexcode
+    //document.querySelector("body > main > button").style.backgroundColor=hexcode
     
     var intc = InvertHex(hexcode)
-    document.querySelector("body > main > button").style.backgroundColor=intc
+    //document.querySelector("body > main > button").style.backgroundColor=intc
     document.querySelector("body > main > button").style.color=hexcode
+    document.querySelector("body > main > p").style.color = intc
     //blue
     }
     
@@ -130,8 +137,8 @@ return invertedHex
     document.querySelector("body").style.backgroundColor=hexcode
     
     var intc = InvertHex(hexcode)
-    document.querySelector("body > main > button").style.backgroundColor=intc
-    document.querySelector("body > main > p").style.color = "white"
+    //document.querySelector("body > main > button").style.backgroundColor=intc
+    document.querySelector("body > main > p").style.color = intc
     document.querySelector("body > main > button").style.color=hexcode
     }
 
