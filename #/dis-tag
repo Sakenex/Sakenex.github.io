@@ -1,21 +1,63 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
-    <link href='https://fonts.googleapis.com/css2?family=Seymour+One&display=swap' rel='stylesheet'>
-    <style>
+        <link href='https://fonts.googleapis.com/css2?family=Seymour+One&display=swap' rel='stylesheet'>
+        <style>
+        .buttons {
+            border: none;
+            border-radius: 10px;
+            padding: 4px 4px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 4px;
+            cursor: pointer;
+         }
     .Tcenter {
         text-align: center;
     }
     .CoolText {
     font-family: 'Seymour One', sans-serif;font-size: 22px;
     }
-    </style>
+        </style>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Sakenex#0001</title>
     </head>
-    <body bgcolor="#5a37e8">
-        <main>
-            <p style="color:white;" class="Tcenter CoolText">Sakenex#0001</p>
+    <body>
+        <main >
+            <p class="CoolText Tcenter">Sakenex#0001</p>
+            
+              <script>
+    r = Math.floor(Math.random() * 5) + 1
+	
+    if (r==1){
+    document.querySelector("body").style.backgroundColor="#e9fc88"
+    //yellow
+    }
+    
+    if (r==2){
+    document.querySelector("body").style.backgroundColor="#5a37e8"
+    document.querySelector("body > main > p").style.color = "white"
+    //blue
+    }
+    
+    if (r==3){document.querySelector("body").style.backgroundColor="#88fc92"
+    //green
+    }
+    
+    if (r==4){
+    document.querySelector("body").style.backgroundColor="#88d7fc"
+    //blue
+    }
+    
+    if (r==5){
+    document.querySelector("body").style.backgroundColor="#fc8890"
+    document.querySelector("body > main > p").style.color = "white"
+    }
+
+    </script>
         </main>
 </html>
